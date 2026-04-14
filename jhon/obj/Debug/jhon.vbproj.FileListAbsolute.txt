@@ -1,0 +1,13 @@
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.vbproj.AssemblyReference.cache
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.FrmPrincipal.resources
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.FrmConfiguracion.resources
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.Resources.resources
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.vbproj.GenerateResource.cache
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.vbproj.CoreCompileInputs.cache
+C:\Users\Bebem\source\repos\jhon\jhon\bin\Debug\jhon.exe.config
+C:\Users\Bebem\source\repos\jhon\jhon\bin\Debug\jhon.exe
+C:\Users\Bebem\source\repos\jhon\jhon\bin\Debug\jhon.pdb
+C:\Users\Bebem\source\repos\jhon\jhon\bin\Debug\jhon.xml
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.exe
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.xml
+C:\Users\Bebem\source\repos\jhon\jhon\obj\Debug\jhon.pdb
