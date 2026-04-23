@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8673F5B0-C02D-4972-82B6-CCB70E8C3168}|proyecto\\proyecto.vbproj|d:\\santeslux\\descargas crome\\puto_gracida-main\\proyecto\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{8673F5B0-C02D-4972-82B6-CCB70E8C3168}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8673F5B0-C02D-4972-82B6-CCB70E8C3168}|proyecto\\proyecto.vbproj|D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\proyecto\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{8673F5B0-C02D-4972-82B6-CCB70E8C3168}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\frmprincipal.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8673F5B0-C02D-4972-82B6-CCB70E8C3168}|proyecto\\proyecto.vbproj|D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\proyecto\\frmconfiguracion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{8673F5B0-C02D-4972-82B6-CCB70E8C3168}|proyecto\\proyecto.vbproj|solutionrelative:proyecto\\frmconfiguracion.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmPrincipal.vb",
+              "DocumentMoniker": "D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\proyecto\\FrmPrincipal.vb",
+              "RelativeDocumentMoniker": "proyecto\\FrmPrincipal.vb",
+              "ToolTip": "D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\proyecto\\FrmPrincipal.vb",
+              "RelativeToolTip": "proyecto\\FrmPrincipal.vb",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAqwAsBAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-11T06:11:09.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmPrincipal.vb [Dise\u00F1o]",
+              "DocumentMoniker": "D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\proyecto\\FrmPrincipal.vb",
+              "RelativeDocumentMoniker": "proyecto\\FrmPrincipal.vb",
+              "ToolTip": "D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\proyecto\\FrmPrincipal.vb [Dise\u00F1o]",
+              "RelativeToolTip": "proyecto\\FrmPrincipal.vb [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-11T06:10:33.074Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmConfiguracion.vb",
+              "DocumentMoniker": "D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\proyecto\\FrmConfiguracion.vb",
+              "RelativeDocumentMoniker": "proyecto\\FrmConfiguracion.vb",
+              "ToolTip": "D:\\SantesLux\\Descargas Crome\\puto_gracida-main\\proyecto\\FrmConfiguracion.vb",
+              "RelativeToolTip": "proyecto\\FrmConfiguracion.vb",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2026-04-11T05:42:56.81Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

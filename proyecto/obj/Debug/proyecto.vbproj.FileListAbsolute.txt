@@ -1,0 +1,26 @@
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.vbproj.AssemblyReference.cache
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.FrmConfiguracion.resources
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.FrmPrincipal.resources
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.Resources.resources
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.vbproj.GenerateResource.cache
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.vbproj.CoreCompileInputs.cache
+C:\Users\Bebem\source\repos\proyecto\proyecto\bin\Debug\proyecto.exe.config
+C:\Users\Bebem\source\repos\proyecto\proyecto\bin\Debug\proyecto.exe
+C:\Users\Bebem\source\repos\proyecto\proyecto\bin\Debug\proyecto.pdb
+C:\Users\Bebem\source\repos\proyecto\proyecto\bin\Debug\proyecto.xml
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.exe
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.xml
+C:\Users\Bebem\source\repos\proyecto\proyecto\obj\Debug\proyecto.pdb
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.vbproj.AssemblyReference.cache
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.FrmConfiguracion.resources
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.FrmPrincipal.resources
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.Resources.resources
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.vbproj.GenerateResource.cache
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.vbproj.CoreCompileInputs.cache
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.exe
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.xml
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\obj\Debug\proyecto.pdb
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\bin\Debug\proyecto.exe.config
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\bin\Debug\proyecto.exe
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\bin\Debug\proyecto.pdb
+D:\SantesLux\Descargas Crome\puto_gracida-main\proyecto\bin\Debug\proyecto.xml
