@@ -40,8 +40,6 @@ Partial Class FrmPrincipal
         Me.LblPuertoActual = New System.Windows.Forms.Label()
         Me.BtnAceptar = New System.Windows.Forms.Button()
         Me.BtnLimpíar = New System.Windows.Forms.Button()
-        Me.LblValorActual = New System.Windows.Forms.Label()
-        Me.cmbMedida = New System.Windows.Forms.ComboBox()
         CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -115,6 +113,9 @@ Partial Class FrmPrincipal
         Me.COMDISPONIBLESToolStripMenuItem.Size = New System.Drawing.Size(120, 20)
         Me.COMDISPONIBLESToolStripMenuItem.Text = "COM DISPONIBLES"
         '
+        'Timer1
+        '
+        '
         'SerialPort1
         '
         '
@@ -145,32 +146,11 @@ Partial Class FrmPrincipal
         Me.BtnLimpíar.Text = "LIMPIAR"
         Me.BtnLimpíar.UseVisualStyleBackColor = True
         '
-        'LblValorActual
-        '
-        Me.LblValorActual.AutoSize = True
-        Me.LblValorActual.Location = New System.Drawing.Point(247, 389)
-        Me.LblValorActual.Name = "LblValorActual"
-        Me.LblValorActual.Size = New System.Drawing.Size(48, 13)
-        Me.LblValorActual.TabIndex = 5
-        Me.LblValorActual.Text = "Sin valor"
-        '
-        'cmbMedida
-        '
-        Me.cmbMedida.DisplayMember = "Celcius"
-        Me.cmbMedida.FormattingEnabled = True
-        Me.cmbMedida.Items.AddRange(New Object() {"Celsius", "Farenheit "})
-        Me.cmbMedida.Location = New System.Drawing.Point(191, 417)
-        Me.cmbMedida.Name = "cmbMedida"
-        Me.cmbMedida.Size = New System.Drawing.Size(154, 21)
-        Me.cmbMedida.TabIndex = 6
-        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(573, 450)
-        Me.Controls.Add(Me.cmbMedida)
-        Me.Controls.Add(Me.LblValorActual)
         Me.Controls.Add(Me.BtnLimpíar)
         Me.Controls.Add(Me.BtnAceptar)
         Me.Controls.Add(Me.LblPuertoActual)
@@ -197,10 +177,8 @@ Partial Class FrmPrincipal
     Friend WithEvents LblPuertoActual As Label
     Friend WithEvents BtnAceptar As Button
     Friend WithEvents BtnLimpíar As Button
-    Friend WithEvents LblValorActual As Label
     Friend WithEvents DatosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ImportarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ExportarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SALIRToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents cmbMedida As ComboBox
 End Class

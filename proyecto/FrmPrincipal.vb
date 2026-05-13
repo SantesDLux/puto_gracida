@@ -8,7 +8,6 @@ Public Class FrmPrincipal
     Dim puertoConfigurado As Boolean = False
     Dim rnd As New Random()
 
-    ' Lista interna para guardar SIEMPRE los valores originales en Celsius
     Dim valoresCelsius As New List(Of Double)
 
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -20,9 +19,8 @@ Public Class FrmPrincipal
             .BorderWidth = 2
         End With
         Chart1.ChartAreas(0).AxisX.Title = "Tiempo"
-        Chart1.ChartAreas(0).AxisY.Title = "Temperatura (°C)"
+        Chart1.ChartAreas(0).AxisY.Title = "Señal"
         LblPuertoActual.Text = "Sin puerto seleccionado"
-        cmbMedida.Text = "Celsius"
     End Sub
 
     Private Sub BUSCARCOMToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BUSCARCOMToolStripMenuItem.Click
@@ -98,30 +96,12 @@ Public Class FrmPrincipal
         End Try
     End Sub
 
-    ' CORRECCIÓN PRINCIPAL:
-    ' - Recibe siempre el valor en Celsius
-    ' - Lo guarda en la lista interna
-    ' - Convierte al mostrar según la unidad seleccionada
-    ' - El label muestra la unidad correcta
     Private Sub GraficarPunto(valorCelsius As Double)
-        ' Guardar el valor original en Celsius
         valoresCelsius.Add(valorCelsius)
 
-        Dim valorFinal As Double
-        Dim unidad As String
-
-        If cmbMedida.Text = "Fahrenheit" Then
-            valorFinal = (valorCelsius * 9 / 5) + 32
-            unidad = "°F"
-        Else
-            valorFinal = valorCelsius
-            unidad = "°C"
-        End If
+        Dim valorFinal As Double = valorCelsius
 
         Chart1.Series("Sensor").Points.AddXY(tiempo, valorFinal)
-
-        ' Label con unidad correcta
-        LblValorActual.Text = "Valor: " & valorFinal.ToString("F2") & " " & unidad
 
         tiempo += 1
 
@@ -137,9 +117,8 @@ Public Class FrmPrincipal
         If resp = MsgBoxResult.No Then Return
 
         Chart1.Series("Sensor").Points.Clear()
-        valoresCelsius.Clear()   ' Limpiar también la lista interna
+        valoresCelsius.Clear()
         tiempo = 0
-        LblValorActual.Text = "Valor: -"
     End Sub
 
     Private Sub ExportarCSVToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExportarToolStripMenuItem.Click
@@ -155,7 +134,6 @@ Public Class FrmPrincipal
 
         If dlg.ShowDialog() = DialogResult.OK Then
             Using sw As New StreamWriter(dlg.FileName)
-                ' Exportar siempre en Celsius para consistencia
                 sw.WriteLine("Tiempo,Celsius")
                 For i As Integer = 0 To valoresCelsius.Count - 1
                     sw.WriteLine(i.ToString() & "," & valoresCelsius(i).ToString())
@@ -173,7 +151,7 @@ Public Class FrmPrincipal
         If dlg.ShowDialog() = DialogResult.OK Then
             Try
                 Chart1.Series("Sensor").Points.Clear()
-                valoresCelsius.Clear()   ' Limpiar lista interna al importar
+                valoresCelsius.Clear()
                 tiempo = 0
 
                 Dim lineas() As String = File.ReadAllLines(dlg.FileName)
@@ -187,24 +165,13 @@ Public Class FrmPrincipal
                         Dim t As Double
                         Dim v As Double
                         If Double.TryParse(partes(0).Trim(), t) AndAlso Double.TryParse(partes(1).Trim(), v) Then
-                            ' El CSV guarda valores en Celsius
                             valoresCelsius.Add(v)
-
-                            Dim valorFinal As Double
-                            If cmbMedida.Text = "Fahrenheit" Then
-                                valorFinal = (v * 9 / 5) + 32
-                            Else
-                                valorFinal = v
-                            End If
-
-                            Chart1.Series("Sensor").Points.AddXY(t, valorFinal)
+                            Chart1.Series("Sensor").Points.AddXY(t, v)
                             tiempo = CInt(t) + 1
                         End If
                     End If
                 Next
 
-                LblValorActual.Text = "CSV cargado: " & (lineas.Length - inicio) & " puntos"
-                ActualizarTituloEje()
                 MsgBox("CSV importado correctamente.")
             Catch ex As Exception
                 MsgBox("Error al importar: " & ex.Message)
@@ -230,51 +197,18 @@ Public Class FrmPrincipal
         Debug.WriteLine("Error de puerto serial: " & e.EventType.ToString())
     End Sub
 
-    ' CORRECCIÓN PRINCIPAL del bug de conversión acumulada:
-    ' Antes: tomaba el valor ya convertido y lo volvía a convertir → datos corruptos
-    ' Ahora: reconstruye la gráfica desde los valores originales en Celsius
-    Private Sub cmbMedida_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbMedida.SelectedIndexChanged
-        ActualizarTituloEje()
-
-        If valoresCelsius.Count = 0 Then Return
-
-        Dim esFahrenheit As Boolean = (cmbMedida.Text = "Fahrenheit")
-
-        Chart1.Series("Sensor").Points.Clear()
-
-        For i As Integer = 0 To valoresCelsius.Count - 1
-            Dim valorFinal As Double
-            If esFahrenheit Then
-                valorFinal = (valoresCelsius(i) * 9 / 5) + 32
-            Else
-                valorFinal = valoresCelsius(i)
-            End If
-            Chart1.Series("Sensor").Points.AddXY(i, valorFinal)
-        Next
-
-        ' Actualizar el label con el último valor y la unidad correcta
-        Dim ultimo As Double = valoresCelsius(valoresCelsius.Count - 1)
-        If esFahrenheit Then
-            LblValorActual.Text = "Valor: " & ((ultimo * 9 / 5) + 32).ToString("F2") & " °F"
-        Else
-            LblValorActual.Text = "Valor: " & ultimo.ToString("F2") & " °C"
-        End If
-
-        Chart1.Invalidate()
-    End Sub
-
-    ' Método auxiliar para mantener el título del eje Y consistente con la unidad
-    Private Sub ActualizarTituloEje()
-        If cmbMedida.Text = "Fahrenheit" Then
-            Chart1.ChartAreas(0).AxisY.Title = "Temperatura (°F)"
-        Else
-            Chart1.ChartAreas(0).AxisY.Title = "Temperatura (°C)"
-        End If
-    End Sub
+    Dim angulo As Double = 0
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        Dim valorSimulado As Double = rnd.NextDouble() * (35.0 - 20.0) + 20.0
-        GraficarPunto(valorSimulado)
+        Dim baseTemp As Double = 27 + 5 * Math.Sin(angulo)
+
+        Dim ruido As Double = rnd.NextDouble() * 1.5 - 0.75
+
+        Dim valorSimulado As Double = baseTemp + ruido
+
+        GraficarPunto(Math.Round(valorSimulado, 2))
+
+        angulo += 0.2
     End Sub
 
 End Class
